@@ -3,26 +3,25 @@
 </template>
 <script>
 export default {
-  name: "",
-  data() {
-    return {};
+  props: {
+    msg: {
+      type: String,
+      default: "信息模板"
+    }
   },
-  components: {},
-  props: {},
-  computed: {},
-  methods: {},
-  beforeCreate() {
+  beforeCreate () {
     console.log("this is beforeCreate");
   },
-  setup() {
+  setup (props, context) {
     // setup函数在生命周期函数beforeCreate和created之间执行
     console.log("this is setup");
+    // props是setup函数的第一个参数，是组件外部传入进来的属性，与vue2.0的props基本是一致的
+    console.log(props);
+    console.log(context);
   },
-  created() {
+  created () {
     console.log("this is created");
-  },
-  mounted() {},
-  watch: {}
+  }
 };
 </script>
 
