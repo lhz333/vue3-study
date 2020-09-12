@@ -4,6 +4,7 @@
     <ComReactive />
     <ComRef />
     <ComToRefs />
+    <ComComputed />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import ComSetup from "@/components/1.setup.vue";
 import ComReactive from "@/components/2.reactive.vue";
 import ComRef from "@/components/3.ref.vue";
 import ComToRefs from "@/components/4.toRefs.vue";
+import ComComputed from "@/components/5.computed.vue";
 
 export default {
   name: "Home",
@@ -20,7 +22,8 @@ export default {
     ComSetup,
     ComReactive,
     ComRef,
-    ComToRefs
+    ComToRefs,
+    ComComputed
   }
 };
 </script>
