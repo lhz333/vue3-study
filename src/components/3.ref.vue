@@ -3,11 +3,12 @@
     <h2>------ref函数------</h2>
     <p>{{ count }}</p>
     <button @click="count += 1">+1</button>
+    <p>{{ name }}</p>
   </div>
 </template>
 
 <script>
-import { ref } from "@vue/composition-api";
+import { isRef, ref, reactive } from "@vue/composition-api";
 export default {
   data() {
     return {};
@@ -23,7 +24,22 @@ export default {
     console.log(count.value);
     count.value++;
     console.log(count.value);
-    return { count };
+
+    // 可以把ref函数创建出的数据对象 挂载到reactive函数上
+    const name = ref("测试");
+
+    const state = reactive({
+      name
+    });
+    // 新的ref会覆盖旧的ref
+    const newName = ref("新测试");
+    state.name = newName;
+
+    // isRef()用来判断某个值是否为ref()创建出来的对象；
+    console.log(isRef(name));
+    console.log(isRef(state));
+
+    return { ...state, count };
   }
 };
 </script>
