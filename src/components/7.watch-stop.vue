@@ -2,7 +2,7 @@
   <div>
     <h2>------watch stop------</h2>
     <p>count的值：{{ count }}</p>
-    <button @click="stop">停止监听</button>
+    <button @click="stopWatch">停止监听</button>
   </div>
 </template>
 
@@ -16,13 +16,20 @@ export default {
     // 直接调用stop()便可停止监听
     const stop = watch(count, () => console.log(count.value));
 
-    setInterval(() => {
+    var timer = setInterval(() => {
       count.value += 1;
     }, 2000);
 
+    // 停止监听的同时 清除定时器
+    const stopWatch = () => {
+      clearInterval(timer);
+      stop();
+    };
+
     return {
       count,
-      stop
+      stop,
+      stopWatch
     };
   }
 };
