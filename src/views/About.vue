@@ -1,5 +1,12 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <ComWatch />
   </div>
 </template>
+
+<script>
+import ComWatch from "@/components/6.watch.vue";
+export default {
+  components: { ComWatch }
+};
+</script>

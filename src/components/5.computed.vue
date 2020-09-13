@@ -14,6 +14,7 @@
 import { computed, ref } from "@vue/composition-api";
 export default {
   setup() {
+    console.log("--------------computed--------------");
     const count = ref(0);
     // 只读的计算属性
     const addValue = computed(() => count.value + 1);
