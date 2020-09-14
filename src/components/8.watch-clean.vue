@@ -9,6 +9,7 @@
 import { ref, watch } from "@vue/composition-api";
 export default {
   setup() {
+    console.log("--------------watch clean--------------");
     const name = ref("");
 
     const asyncprint = (newVal, oldVal) => {
