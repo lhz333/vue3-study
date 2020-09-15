@@ -23,6 +23,11 @@ const routes = [
     path: "/lifecycle",
     name: "Lifecycle",
     component: () => import("../components/9.lifeCycle.vue")
+  },
+  {
+    path: "/provide",
+    name: "Provide",
+    component: () => import("../components/10.parent.vue")
   }
 ];
 
