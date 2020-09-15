@@ -28,6 +28,11 @@ const routes = [
     path: "/provide",
     name: "Provide",
     component: () => import("../components/10.parent.vue")
+  },
+  {
+    path: "/templateRefs",
+    name: "TemplateRefs",
+    component: () => import("../components/11.templateRefs.vue")
   }
 ];
 

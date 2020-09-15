@@ -4,7 +4,8 @@
       <router-link to="/">base</router-link> |
       <router-link to="/about">Watch</router-link> |
       <router-link to="/lifecycle">Life cycle</router-link> |
-      <router-link to="/provide">provide inject</router-link>
+      <router-link to="/provide">provide inject</router-link> |
+      <router-link to="/templateRefs">template refs</router-link>
     </div>
     <router-view />
   </div>
