@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import { useRoute } from 'vue-router'
 export default {
   name: 'HelloWorld',
   props: {
@@ -17,6 +18,10 @@ export default {
     return {
       count: 0
     }
+  },
+  setup() {
+    const route =  useRoute()
+    console.log(route)
   }
 }
 </script>
